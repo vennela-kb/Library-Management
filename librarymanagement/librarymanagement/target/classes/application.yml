@@ -1,0 +1,49 @@
+spring:
+  profiles:
+    active: prod
+  jpa:
+   hibernate:
+      ddl-auto: update
+      show-sql: true
+springdoc:
+  api-docs:
+    enabled: true
+    swagger-ui: documentation
+
+---
+spring:
+   profiles: dev
+   datasource:
+     username: sa
+     password: sa
+     url: jdbc:h2:mem:db
+     driver-class-name: org.h2.Driver
+server:
+  port: 8081
+
+---
+spring:
+  profiles: test
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/library_test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8082
+---
+spring:
+  profiles: prod
+  datasource:
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/library_prod
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+  server:
+    port: 8083
+---
+
