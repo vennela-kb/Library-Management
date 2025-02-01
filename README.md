@@ -82,16 +82,6 @@ library-management/
 
 ---
 
-## 📜 License
-This project is released under the **MIT License**.
-
----
-
-## 📥 Download
-Click [here](../Library-Management-main.zip) to download the complete project.
-
----
-
 ## ✉️ Contact
 For any queries, reach out to:
 - **Vennela Kothakonda** - Developer
